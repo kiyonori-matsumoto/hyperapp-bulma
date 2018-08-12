@@ -4,5 +4,8 @@
   },
   "emmet.syntaxProfiles": {
     "html": "xhtml"
-  }
+  },
+  "editor.formatOnSave": true,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "es5"
 }
