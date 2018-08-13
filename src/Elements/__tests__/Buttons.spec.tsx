@@ -1,12 +1,12 @@
-import "jest";
-import { h, app } from "hyperapp";
-import Buttons from "../Buttons";
+import 'jest';
+import { h, app } from 'hyperapp';
+import { Buttons } from '../Buttons';
 
 let actions: any;
 let state: any;
 
 beforeEach(() => {
-  document.body.innerHTML = "";
+  document.body.innerHTML = '';
   actions = {
     up: () => (state: any) => ({ count: state.count + 1 }),
   };
@@ -16,7 +16,7 @@ beforeEach(() => {
   jest.useFakeTimers();
 });
 
-test("can create", () => {
+test('can create', () => {
   const view = () => <Buttons>test</Buttons>;
   app(state, actions, view, document.body);
   jest.runAllTimers();

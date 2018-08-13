@@ -1,12 +1,12 @@
-import "jest";
-import { h, app } from "hyperapp";
-import Button from "../Button";
+import 'jest';
+import { h, app } from 'hyperapp';
+import { Button } from '../Button';
 
 let actions: any;
 let state: any;
 
 beforeEach(() => {
-  document.body.innerHTML = "";
+  document.body.innerHTML = '';
   actions = {
     up: () => (state: any) => ({ count: state.count + 1 }),
   };
@@ -16,7 +16,7 @@ beforeEach(() => {
   jest.useFakeTimers();
 });
 
-test("can create", () => {
+test('can create', () => {
   const view = () => <Button>test</Button>;
   app(state, actions, view, document.body);
   jest.runAllTimers();
@@ -25,7 +25,7 @@ test("can create", () => {
   );
 });
 
-test("all props", () => {
+test('all props', () => {
   const view = (state: any, actions: any) => (
     <Button
       isFullwidth
@@ -44,11 +44,11 @@ test("all props", () => {
   );
   app(state, actions, view, document.body);
   jest.runAllTimers();
-  const item = document.getElementById("foo");
+  const item = document.getElementById('foo');
   expect(item).not.toBeNull();
-  expect(item!.tagName).toEqual("BUTTON");
-  "is-fullwidth is-inverted is-loading is-outlined is-rounded is-static is-danger is-small"
-    .split(" ")
+  expect(item!.tagName).toEqual('BUTTON');
+  'is-fullwidth is-inverted is-loading is-outlined is-rounded is-static is-danger is-small'
+    .split(' ')
     .forEach(cls => {
       expect(item!.classList.contains(cls)).toBeTruthy();
     });

@@ -1,6 +1,6 @@
 import 'jest';
 import { h, app } from 'hyperapp';
-import Panel, { PanelHeading } from '../Panel';
+import { Panel, PanelHeading, PanelBlockAnchor } from '../Panel';
 
 let actions: any;
 let state: any;
@@ -20,11 +20,12 @@ test('can create', () => {
   const view = () => (
     <Panel>
       <PanelHeading>test</PanelHeading>
+      <PanelBlockAnchor isActive>aaa</PanelBlockAnchor>
     </Panel>
   );
   app(state, actions, view, document.body);
   jest.runAllTimers();
   expect(document.body.innerHTML).toEqual(
-    '<div class="panel"><p class="panel-heading">test</p></div>'
+    '<div class="panel"><p class="panel-heading">test</p><a class="panel-block is-active">aaa</a></div>'
   );
 });

@@ -1,9 +1,9 @@
-import { h, VNode } from "hyperapp";
-import cc from "classcat";
-import { tc, isStr } from "../util";
-import { Children, Color, Size } from "../types";
+import { h, Children } from 'hyperapp';
+import cc from 'classcat';
+import { tc, isStr } from '../util';
+import { Color, Size } from '../types';
 
-export default (
+export const Button = (
   {
     isLoading = false,
     isFullwidth = false,
@@ -14,8 +14,8 @@ export default (
     isHovered = false,
     isFocused = false,
     isActive = false,
-    color = "",
-    size = "",
+    color = '',
+    size = '',
     ...props
   }: {
     isLoading?: boolean;
@@ -31,7 +31,7 @@ export default (
   child: Children
 ) => {
   const classStr = cc([
-    "button",
+    'button',
     props.class,
     tc({ isLoading, isFullwidth, isOutlined, isInverted, isStatic, isRounded }),
     isStr(color),

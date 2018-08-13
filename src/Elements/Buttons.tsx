@@ -1,7 +1,6 @@
-import { h } from "hyperapp";
-import { Children } from "../types";
+import { h, Children } from 'hyperapp';
 
-export default (props: { [k: string]: any }, child: Children) => (
+export const Buttons = (props: { [k: string]: any }, child: Children) => (
   <div class="buttons" {...props}>
     {child}
   </div>

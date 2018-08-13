@@ -1,7 +1,8 @@
 {
   "name": "hyperapp-bulma",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "repository": "https://github.com/kiyonori-matsumoto/hyperapp-bulma.git",
   "author": "Kiyonori Matsumoto <kiyonori.matsumoto@gmail.com>",
   "license": "MIT",
@@ -21,6 +22,7 @@
     "hyperapp": "^1.2.8"
   },
   "scripts": {
+    "build": "tsc",
     "test": "jest"
   },
   "jest": {
@@ -39,6 +41,9 @@
     },
     "testMatch": [
       "**/__tests__/*.+(ts|tsx|js)"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/dist/", "/node_modules/"
     ]
   }
 }

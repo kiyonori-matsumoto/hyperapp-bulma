@@ -1,4 +1,3 @@
-import { h } from "hyperapp";
-import { Children } from "../types";
+import { h, Children } from 'hyperapp';
 
-export default ({}, child: Children) => <div class="box">{child}</div>;
+export const Box = ({}, child: Children) => <div class="box">{child}</div>;

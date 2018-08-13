@@ -1,9 +1,9 @@
-import { h } from "hyperapp";
-import cc from "classcat";
-import { isStr } from "../util";
-import { Children, Size } from "../types";
+import { h, Children } from 'hyperapp';
+import cc from 'classcat';
+import { isStr } from '../util';
+import { Size } from '../types';
 
-export default (
+export const Content = (
   {
     size,
     ...props
@@ -13,7 +13,7 @@ export default (
   },
   child: Children
 ) => (
-  <div class={cc(["content", isStr(size)])} {...props}>
+  <div class={cc(['content', isStr(size)])} {...props}>
     {child}
   </div>
 );
