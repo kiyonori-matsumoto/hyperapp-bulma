@@ -10,6 +10,6 @@ exports.Modal = function (_a, child) {
     var isActive = _a.isActive, closeButtonSize = _a.closeButtonSize, onCloseButtonClick = _a.onCloseButtonClick;
     return (hyperapp_1.h("div", { class: classcat_1.default(['modal', util_1.tc({ isActive: isActive })]) },
         hyperapp_1.h("div", { class: "modal-background" }),
-        child,
+        hyperapp_1.h("div", { class: "modal-content" }, child),
         hyperapp_1.h("button", { class: classcat_1.default(['modal-close', util_1.isStr(closeButtonSize)]), onclick: onCloseButtonClick, "aria-label": "close" })));
 };

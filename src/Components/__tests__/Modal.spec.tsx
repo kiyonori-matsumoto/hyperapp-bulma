@@ -22,7 +22,7 @@ test('can create', () => {
   app(state, actions, view, document.body);
   jest.runAllTimers();
   expect(document.body.innerHTML).toEqual(
-    '<div class="modal"><div class="modal-background"></div>test<button class="modal-close" aria-label="close"></button></div>'
+    '<div class="modal"><div class="modal-background"></div><div class="modal-content">test</div><button class="modal-close" aria-label="close"></button></div>'
   );
 });
 

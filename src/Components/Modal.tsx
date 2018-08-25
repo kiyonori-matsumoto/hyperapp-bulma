@@ -17,7 +17,7 @@ export const Modal = (
 ) => (
   <div class={cc(['modal', tc({ isActive })])}>
     <div class="modal-background" />
-    {child}
+    <div class="modal-content">{child}</div>
     <button
       class={cc(['modal-close', isStr(closeButtonSize)])}
       onclick={onCloseButtonClick}
