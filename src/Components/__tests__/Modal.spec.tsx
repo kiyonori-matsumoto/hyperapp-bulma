@@ -28,7 +28,12 @@ test('can create', () => {
 
 test('can handle close button click', () => {
   const view = (_: any, a: any) => (
-    <Modal isActive closeButtonSize="large" onCloseButtonClick={() => a.up()}>
+    <Modal
+      isActive
+      closeButtonSize="large"
+      onCloseButtonClick={() => a.up()}
+      foo="bar"
+    >
       test
     </Modal>
   );
@@ -43,5 +48,8 @@ test('can handle close button click', () => {
       .getElementsByClassName('modal')[0]
       .classList.contains('is-active')
   ).toBeTruthy();
+  expect(
+    document.body.getElementsByClassName('modal-content')[0].getAttribute('foo')
+  ).toEqual('bar');
   expect(button.classList.contains('is-large')).toBeTruthy();
 });
