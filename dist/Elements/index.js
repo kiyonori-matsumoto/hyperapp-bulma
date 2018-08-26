@@ -7,3 +7,4 @@ __export(require("./Box"));
 __export(require("./Button"));
 __export(require("./Buttons"));
 __export(require("./Content"));
+__export(require("./Icon"));

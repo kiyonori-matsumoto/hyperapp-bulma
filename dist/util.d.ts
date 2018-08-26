@@ -3,4 +3,4 @@ export declare function tc(obj: {
 }): {
     [key: string]: any;
 };
-export declare function isStr(color: string | undefined): string;
+export declare function isStr(str: string | undefined, prefix?: string): string;

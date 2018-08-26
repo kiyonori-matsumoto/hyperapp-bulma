@@ -24,7 +24,7 @@ export const Button = (
     isInverted?: boolean;
     isStatic?: boolean;
     isRounded?: boolean;
-    color?: Color;
+    color?: Color | 'text';
     size?: Size;
     [k: string]: any;
   },

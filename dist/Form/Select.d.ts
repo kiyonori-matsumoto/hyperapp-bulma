@@ -6,6 +6,6 @@ export declare const Select: ({ color, size, isMultiple, isRounded, isHovered, i
     isHovered?: boolean | undefined;
     isFocused?: boolean | undefined;
     isLoading?: boolean | undefined;
-    color?: "" | "link" | "text" | "success" | "primary" | "info" | "warning" | "danger" | "white" | "light" | "dark" | "black" | undefined;
+    color?: "" | "link" | "success" | "primary" | "info" | "warning" | "danger" | "white" | "light" | "dark" | "black" | undefined;
     size?: "" | "small" | "medium" | "large" | undefined;
 }, child: Children) => JSX.Element;
