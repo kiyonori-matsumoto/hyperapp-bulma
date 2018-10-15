@@ -5,4 +5,5 @@ function __export(m) {
 Object.defineProperty(exports, "__esModule", { value: true });
 __export(require("./Panel"));
 __export(require("./Menu"));
+__export(require("./Message"));
 __export(require("./Modal"));
